@@ -1,33 +1,3 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>타이머 앱</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>타이머 앱</h1>
-        <img src="알람시계.png" alt="알람 시계" class="alarm-image" id="alarm-clock">
-        <input type="number" id="minutes" placeholder="분" min="0">
-        <input type="number" id="seconds" placeholder="초" min="0" max="59">
-        <button onclick="startTimer()">타이머 시작</button>
-        <button onclick="startStopwatch()">스톱워치 시작</button>
-        <button onclick="pauseTimer()">일시정지</button>
-        <button onclick="resetTimer()">초기화</button>
-        <div id="timer-display"></div>
-        <div id="stopwatch-display"></div>
-        <div id="alarm-message" class="hidden">
-            <img src="박명수.jpg" alt="알림 이미지" class="alert-image">
-            <p>일어나세요!</p>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
-javascript
-코드 복사
 let timer;
 let stopwatchInterval;
 let totalTime = 0;
