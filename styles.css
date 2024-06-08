@@ -12,12 +12,32 @@ body, html {
 .container {
     text-align: center;
     background: white;
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 h1 {
+    margin-bottom: 20px;
+}
+
+.alarm-image, .alert-image {
+    width: 100px;
+    height: 100px;
     margin-bottom: 20px;
 }
 
@@ -47,4 +67,19 @@ button:hover {
 #timer-display {
     margin-top: 20px;
     font-size: 2em;
+}
+
+.hidden {
+    display: none;
+}
+
+#alarm-message {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#alarm-message p {
+    font-size: 1.5em;
+    color: red;
+    font-weight: bold;
 }

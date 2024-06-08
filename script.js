@@ -12,6 +12,7 @@ function startTimer() {
     }
 
     document.getElementById('timer-display').textContent = formatTime(totalTime);
+    document.getElementById('alarm-message').classList.add('hidden');
 
     timer = setInterval(updateTimer, 1000);
 }
@@ -19,8 +20,8 @@ function startTimer() {
 function updateTimer() {
     if (totalTime <= 0) {
         clearInterval(timer);
-        alert('타이머가 끝났습니다!');
         document.getElementById('timer-display').textContent = '';
+        document.getElementById('alarm-message').classList.remove('hidden');
         return;
     }
 
