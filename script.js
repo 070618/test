@@ -42,7 +42,7 @@ function updateTimer() {
 
 function startStopwatch() {
     clearInterval(timer); // 타이머 중지
-    stopwatchInterval = setInterval(updateStopwatch, 1000);
+    stopwatchInterval = setInterval(updateStopwatch, 5000);
 }
 
 function updateStopwatch() {
