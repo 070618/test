@@ -13,6 +13,7 @@ function startTimer() {
 
     document.getElementById('timer-display').textContent = formatTime(totalTime);
     document.getElementById('alarm-message').classList.add('hidden');
+    document.getElementById('alarm-clock').classList.remove('shake');
 
     timer = setInterval(updateTimer, 1000);
 }
@@ -22,6 +23,7 @@ function updateTimer() {
         clearInterval(timer);
         document.getElementById('timer-display').textContent = '';
         document.getElementById('alarm-message').classList.remove('hidden');
+        document.getElementById('alarm-clock').classList.add('shake');
         return;
     }
 
