@@ -42,7 +42,7 @@ button {
     background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px; /* 더 둥글게 만들기 */
     cursor: pointer;
 }
 

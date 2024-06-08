@@ -13,9 +13,9 @@
         <input type="number" id="minutes" placeholder="분" min="0">
         <input type="number" id="seconds" placeholder="초" min="0" max="59">
         <button onclick="startTimer()">타이머 시작</button>
-        <button onclick="startStopwatch()">스톱워치 시작</button>
-        <button onclick="pauseTimer()">일시정지</button>
-        <button onclick="resetTimer()">초기화</button>
+        <button onclick="startStopwatch()">스톱워치 시작/일시정지</button>
+        <button onclick="toggleStopwatchDisplay()">스톱워치 숨기기/보이기</button>
+        <button onclick="changeBackgroundColor()">배경색 변경</button>
         <div id="timer-display"></div>
         <div id="stopwatch-display"></div>
         <div id="alarm-message" class="hidden">

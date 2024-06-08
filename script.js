@@ -3,6 +3,7 @@ let stopwatchInterval;
 let totalTime = 0;
 let stopwatchTime = 0;
 let originalBackground;
+let stopwatchVisible = true;
 
 function startTimer() {
     clearInterval(stopwatchInterval); // 스톱워치 중지
@@ -42,7 +43,12 @@ function updateTimer() {
 
 function startStopwatch() {
     clearInterval(timer); // 타이머 중지
-    stopwatchInterval = setInterval(updateStopwatch, 5000);
+    if (!stopwatchInterval) {
+        stopwatchInterval = setInterval(updateStopwatch, 1000);
+    } else {
+        clearInterval(stopwatchInterval);
+        stopwatchInterval = null;
+    }
 }
 
 function updateStopwatch() {
@@ -50,9 +56,14 @@ function updateStopwatch() {
     document.getElementById('stopwatch-display').textContent = formatTime(stopwatchTime);
 }
 
-function pauseTimer() {
-    clearInterval(timer);
-    clearInterval(stopwatchInterval);
+function toggleStopwatchDisplay() {
+    const stopwatchDisplay = document.getElementById('stopwatch-display');
+    stopwatchVisible = !stopwatchVisible;
+    stopwatchDisplay.style.display = stopwatchVisible ? 'block' : 'none';
+}
+
+function changeBackgroundColor() {
+    document.body.style.backgroundColor = getRandomColor();
 }
 
 function resetTimer() {
